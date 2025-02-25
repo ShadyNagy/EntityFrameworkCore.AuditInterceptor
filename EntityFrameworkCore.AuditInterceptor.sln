@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7AACC4A4-5B0D-4182-937D-B689A2E5B124}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F51A37D-2C5E-4727-B7C0-7E712A3C3B1C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		EntityFrameworkCore.AuditInterceptor.nuspec = EntityFrameworkCore.AuditInterceptor.nuspec
+		global.json = global.json
+		nuget.config = nuget.config
+		.github\workflows\nugt-publish.yml = .github\workflows\nugt-publish.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore.AuditInterceptor", "src\EntityFrameworkCore.AuditInterceptor\EntityFrameworkCore.AuditInterceptor.csproj", "{B70C3951-AAC2-875D-96DB-2031FB08F9DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore.AuditInterceptor.Web", "src\EntityFrameworkCore.AuditInterceptor.Web\EntityFrameworkCore.AuditInterceptor.Web.csproj", "{E9B34280-DE77-4B8E-82B8-0EF1F9C4A7E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B70C3951-AAC2-875D-96DB-2031FB08F9DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70C3951-AAC2-875D-96DB-2031FB08F9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70C3951-AAC2-875D-96DB-2031FB08F9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70C3951-AAC2-875D-96DB-2031FB08F9DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B34280-DE77-4B8E-82B8-0EF1F9C4A7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B34280-DE77-4B8E-82B8-0EF1F9C4A7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B34280-DE77-4B8E-82B8-0EF1F9C4A7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B34280-DE77-4B8E-82B8-0EF1F9C4A7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B70C3951-AAC2-875D-96DB-2031FB08F9DF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E9B34280-DE77-4B8E-82B8-0EF1F9C4A7E3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B10C415-B94A-49DA-8907-92001880C95C}
+	EndGlobalSection
+EndGlobal

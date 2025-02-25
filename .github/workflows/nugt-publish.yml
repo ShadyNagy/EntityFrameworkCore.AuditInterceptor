@@ -1,0 +1,28 @@
+name: publish EntityFrameworkCore.AuditInterceptor to nuget
+
+on:
+  push:
+    branches:
+      - main # Your default release branch
+    paths:
+      - 'src/EntityFrameworkCore.AuditInterceptor/**'
+jobs:
+  publish:
+    name: Build and Publish
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Required for a specific dotnet version that doesn't come with ubuntu-latest / windows-latest
+      # Visit bit.ly/2synnZl to see the list of SDKs that are pre-installed with ubuntu-latest / windows-latest
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.0.x'
+      
+      # Publish
+      - name: Create the package
+        run: dotnet pack -c Release -o . src/EntityFrameworkCore.AuditInterceptor/EntityFrameworkCore.AuditInterceptor.csproj
+        
+      - name: Publish to nuget.org
+        run: nuget push EntityFrameworkCore.AuditInterceptor.*.nupkg -src https://api.nuget.org/v3/index.json ${{secrets.NUGET_API_KEY}}

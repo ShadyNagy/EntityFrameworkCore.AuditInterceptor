@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>EntityFrameworkCore.AuditInterceptor</id>
+    <title>EF Audit Interceptor</title>
+    <version>1.0.0</version>
+    <authors>Shady Nagy</authors>
+    <owners>Shady Nagy</owners>
+
+    <description>
+      EntityFrameworkCore.AuditInterceptor is a .NET library designed to provide seamless auditing capabilities for Entity Framework Core.
+      It allows you to automatically track changes to your entities, including who made the changes and when they were made.
+      The library integrates effortlessly with .NET Dependency Injection and supports various auditing scenarios, making it an ideal choice for enterprise applications that require robust auditing features.
+    </description>
+
+    <summary>
+      A .NET library for auditing Entity Framework Core operations with dependency injection support.
+    </summary>
+
+    <language>en-US</language>
+    <license type="expression">MIT</license>
+
+    <repository type="git" url="https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor" />
+    <projectUrl>https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor</projectUrl>
+    <documentation>https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/wiki</documentation>
+    <issueTracker>https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/issues</issueTracker>
+
+    <releaseNotes>
+      - Initial release of EntityFrameworkCore.AuditInterceptor.
+    </releaseNotes>
+
+    <tags>EntityFrameworkCore, EntityFramework, EF, Audit, Interceptor, AuditInterceptor, .NET, DependencyInjection</tags>
+
+    <icon>icon.png</icon>
+    <copyright>Copyright 2019 - 2025 (c) Shady Nagy. All rights reserved.</copyright>
+    <readme>README.md</readme>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!-- Dependencies -->
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="8.0.2" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.3.0" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="8.0.13" />
+      </group>
+    </dependencies>
+
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+  </metadata>
+
+  <files>
+    <file src="src\EntityFrameworkCore.AuditInterceptor\bin\Release\net80\EntityFrameworkCore.AuditInterceptor.dll" target="lib\net8.0" />
+    <file src="icon.png" />
+    <file src="README.md" />
+    <file src="LICENSE" />
+  </files>
+</package>

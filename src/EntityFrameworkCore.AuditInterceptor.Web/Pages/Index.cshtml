@@ -1,0 +1,11 @@
+﻿@page
+@model EntityFrameworkCore.AuditInterceptor.Web.Pages.IndexModel
+@{
+	ViewData["Title"] = "Home page";
+}
+
+<h1>Home Page</h1>
+
+<form method="post">
+	<button type="submit" asp-page-handler="AddEntity">Add New Entity</button>
+</form>
