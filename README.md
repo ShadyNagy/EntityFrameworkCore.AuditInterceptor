@@ -1,4 +1,4 @@
-[![publish to nuget](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/actions/workflows/nugt-publish.yml/badge.svg)](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/actions/workflows/nugt-publish.yml)
+﻿[![publish to nuget](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/actions/workflows/nugt-publish.yml/badge.svg)](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/actions/workflows/nugt-publish.yml)
 [![EntityFrameworkCore.AuditInterceptor on NuGet](https://img.shields.io/nuget/v/EntityFrameworkCore.AuditInterceptor?label=EntityFrameworkCore.AuditInterceptor)](https://www.nuget.org/packages/EntityFrameworkCore.AuditInterceptor/)
 [![NuGet](https://img.shields.io/nuget/dt/EntityFrameworkCore.AuditInterceptor)](https://www.nuget.org/packages/EntityFrameworkCore.AuditInterceptor)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/blob/main/LICENSE)
@@ -148,3 +148,18 @@ public class IndexModel : PageModel
   <button type="submit" asp-page-handler="AddEntity">Add New Entity</button>
 </form>
 ```
+
+## 🔗 License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙌 Contributing
+🎯 Found a bug or have an idea for improvement?  
+Feel free to **open an issue** or **submit a pull request**!  
+🔗 [GitHub Issues](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/issues)
+
+---
+
+## ⭐ Support the Project
+If you find this package useful, **give it a star ⭐ on GitHub** and **share it with others!** 🚀
