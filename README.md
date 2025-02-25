@@ -1,3 +1,9 @@
+[![publish to nuget](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/actions/workflows/nugt-publish.yml/badge.svg)](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/actions/workflows/nugt-publish.yml)
+[![EntityFrameworkCore.AuditInterceptor on NuGet](https://img.shields.io/nuget/v/EntityFrameworkCore.AuditInterceptor?label=EntityFrameworkCore.AuditInterceptor)](https://www.nuget.org/packages/EntityFrameworkCore.AuditInterceptor/)
+[![NuGet](https://img.shields.io/nuget/dt/EntityFrameworkCore.AuditInterceptor)](https://www.nuget.org/packages/EntityFrameworkCore.AuditInterceptor)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/blob/main/LICENSE)
+[![paypal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/shadynagy)
+
 # EntityFrameworkCore.AuditInterceptor
 
 EntityFrameworkCore.AuditInterceptor is a .NET library designed to provide seamless auditing capabilities for Entity Framework Core. It allows you to automatically track changes to your entities, including who made the changes and when they were made. The library integrates effortlessly with .NET Dependency Injection and supports various auditing scenarios, making it an ideal choice for enterprise applications that require robust auditing features.
