@@ -6,16 +6,17 @@
 
 # EntityFrameworkCore.AuditInterceptor
 
+## 📌 Introduction
 EntityFrameworkCore.AuditInterceptor is a .NET library designed to provide seamless auditing capabilities for Entity Framework Core. It allows you to automatically track changes to your entities, including who made the changes and when they were made. The library integrates effortlessly with .NET Dependency Injection and supports various auditing scenarios, making it an ideal choice for enterprise applications that require robust auditing features.
 
-## Features
+### 📌 Key Features:  
 
 - Automatic tracking of entity changes
 - Integration with .NET Dependency Injection
 - Support for various auditing scenarios
 - Easy configuration and setup
 
-## Installation
+## 📥 Installation
 
 To install the package, use the following command:
 
@@ -23,7 +24,7 @@ To install the package, use the following command:
 dotnet add package EntityFrameworkCore.AuditInterceptor
 ```
 
-## Getting Started
+## 🚀 Quick Start: 
 
 Below is an example of how you might configure the auditing services and your DbContext in your Program.cs:
 
