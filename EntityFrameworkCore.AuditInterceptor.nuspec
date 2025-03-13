@@ -35,6 +35,10 @@
     <copyright>Copyright 2019 - 2025 (c) Shady Nagy. All rights reserved.</copyright>
     <readme>README.md</readme>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
     <!-- Dependencies -->
     <dependencies>
