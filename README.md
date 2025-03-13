@@ -2,7 +2,7 @@
 [![EntityFrameworkCore.AuditInterceptor on NuGet](https://img.shields.io/nuget/v/EntityFrameworkCore.AuditInterceptor?label=EntityFrameworkCore.AuditInterceptor)](https://www.nuget.org/packages/EntityFrameworkCore.AuditInterceptor/)
 [![NuGet](https://img.shields.io/nuget/dt/EntityFrameworkCore.AuditInterceptor)](https://www.nuget.org/packages/EntityFrameworkCore.AuditInterceptor)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ShadyNagy/EntityFrameworkCore.AuditInterceptor/blob/main/LICENSE)
-[![paypal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/shadynagy)
+[![Sponsor](https://img.shields.io/badge/Sponsor-ShadyNagy-brightgreen?logo=github-sponsors)](https://github.com/sponsors/ShadyNagy)
 
 # EntityFrameworkCore.AuditInterceptor
 
