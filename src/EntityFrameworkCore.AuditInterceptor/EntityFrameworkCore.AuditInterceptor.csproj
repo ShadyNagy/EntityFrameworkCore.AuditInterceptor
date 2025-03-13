@@ -6,13 +6,14 @@
     <Nullable>enable</Nullable>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <NuspecFile>../../EntityFrameworkCore.AuditInterceptor.nuspec</NuspecFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../../icon.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="../../icon.png" Pack="true" Visible="false" PackagePath="/" />
+    <None Include="../../README.md" Pack="true" Visible="false" PackagePath="/" />
+    <None Include="../../LICENSE" Pack="true" Visible="false" PackagePath="/" />
   </ItemGroup>
 
   <ItemGroup>
