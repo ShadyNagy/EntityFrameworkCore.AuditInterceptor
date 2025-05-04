@@ -15,14 +15,14 @@ namespace EntityFrameworkCore.AuditInterceptor.Tests.Services
             var userId = "user123";
             var httpContextAccessorMock = new Mock<IHttpContextAccessor>();
             var claimsPrincipalMock = new Mock<ClaimsPrincipal>();
+            var httpContextMock = new Mock<HttpContext>();
             
             claimsPrincipalMock
                 .Setup(x => x.FindFirst(ClaimTypes.NameIdentifier))
                 .Returns(new Claim(ClaimTypes.NameIdentifier, userId));
             
-            httpContextAccessorMock
-                .Setup(x => x.HttpContext.User)
-                .Returns(claimsPrincipalMock.Object);
+            httpContextMock.Setup(x => x.User).Returns(claimsPrincipalMock.Object);
+            httpContextAccessorMock.Setup(x => x.HttpContext).Returns(httpContextMock.Object);
             
             var currentUserService = new CurrentUserService(httpContextAccessorMock.Object);
             
@@ -39,14 +39,14 @@ namespace EntityFrameworkCore.AuditInterceptor.Tests.Services
             // Arrange
             var httpContextAccessorMock = new Mock<IHttpContextAccessor>();
             var claimsPrincipalMock = new Mock<ClaimsPrincipal>();
+            var httpContextMock = new Mock<HttpContext>();
             
             claimsPrincipalMock
                 .Setup(x => x.FindFirst(ClaimTypes.NameIdentifier))
                 .Returns((Claim)null);
             
-            httpContextAccessorMock
-                .Setup(x => x.HttpContext.User)
-                .Returns(claimsPrincipalMock.Object);
+            httpContextMock.Setup(x => x.User).Returns(claimsPrincipalMock.Object);
+            httpContextAccessorMock.Setup(x => x.HttpContext).Returns(httpContextMock.Object);
             
             var currentUserService = new CurrentUserService(httpContextAccessorMock.Object);
             

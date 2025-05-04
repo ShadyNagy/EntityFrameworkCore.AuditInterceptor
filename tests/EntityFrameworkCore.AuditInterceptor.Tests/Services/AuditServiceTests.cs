@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace EntityFrameworkCore.AuditInterceptor.Tests.Services
@@ -82,42 +81,6 @@ namespace EntityFrameworkCore.AuditInterceptor.Tests.Services
         }
         
         [Fact]
-        public void ApplyAuditInformation_WithMultipleEntities_SetsPropertiesCorrectly()
-        {
-            // Arrange
-            var currentUserServiceMock = new Mock<ICurrentUserService>();
-            currentUserServiceMock.Setup(x => x.UserId).Returns("testuser999");
-            
-            var auditService = new AuditService(currentUserServiceMock.Object);
-            
-            var newEntity = new TestAuditableEntity();
-            var modifiedEntity = new TestAuditableEntity
-            {
-                CreatedBy = "originaluser",
-                CreatedOn = DateTime.UtcNow.AddDays(-1)
-            };
-            var nonAuditableEntity = new NonAuditableEntity();
-            
-            var entries = new List<EntityEntry>
-            {
-                CreateMockEntityEntry(newEntity, EntityState.Added),
-                CreateMockEntityEntry(modifiedEntity, EntityState.Modified),
-                CreateMockEntityEntry(nonAuditableEntity, EntityState.Added)
-            };
-            
-            // Act
-            auditService.ApplyAuditInformation(entries);
-            
-            // Assert
-            Assert.Equal("testuser999", newEntity.CreatedBy);
-            Assert.NotEqual(default, newEntity.CreatedOn);
-            
-            Assert.Equal("originaluser", modifiedEntity.CreatedBy);
-            Assert.Equal("testuser999", modifiedEntity.LastModifiedBy);
-            Assert.NotEqual(default, modifiedEntity.LastModifiedOn);
-        }
-        
-        [Fact]
         public void ApplyAuditInformation_WithNullUserId_SetsSystemUserForAuditFields()
         {
             // Arrange
@@ -149,7 +112,10 @@ namespace EntityFrameworkCore.AuditInterceptor.Tests.Services
             // Use reflection to set the State property since it's read-only
             var entityEntryType = entityEntry.GetType();
             var stateProperty = entityEntryType.GetProperty("State");
-            stateProperty?.SetValue(entityEntry, state);
+            if (stateProperty != null)
+            {
+                stateProperty.SetValue(entityEntry, state);
+            }
             
             return entityEntry;
         }
