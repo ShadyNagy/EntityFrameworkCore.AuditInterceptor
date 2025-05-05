@@ -3,7 +3,7 @@
   <metadata>
     <id>EntityFrameworkCore.AuditInterceptor</id>
     <title>EF Audit Interceptor</title>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Shady Nagy</authors>
     <owners>Shady Nagy</owners>
 
