@@ -4,6 +4,7 @@ using EntityFrameworkCore.AuditInterceptor.Interfaces;
 using EntityFrameworkCore.AuditInterceptor.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Http;
 using Xunit;
 
 namespace EntityFrameworkCore.AuditInterceptor.Tests.Extensions
@@ -54,7 +55,7 @@ namespace EntityFrameworkCore.AuditInterceptor.Tests.Extensions
         {
             // Arrange
             var services = new ServiceCollection();
-            services.AddHttpContextAccessor();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddAuditing();
             
             var serviceProvider = services.BuildServiceProvider();

@@ -43,7 +43,7 @@ namespace EntityFrameworkCore.AuditInterceptor.Tests.Services
         {
             // Arrange
             var httpContextAccessorMock = new Mock<IHttpContextAccessor>();
-            httpContextAccessorMock.Setup(x => x.HttpContext).Returns((HttpContext?)null);
+            httpContextAccessorMock.Setup(x => x.HttpContext).Returns((HttpContext)null!);
             
             var currentUserService = new CurrentUserService(httpContextAccessorMock.Object);
             
